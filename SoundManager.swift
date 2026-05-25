@@ -13,7 +13,7 @@ class SoundManager {
     private func getAudioPlayer(sound: Sound) -> AVAudioPlayer? {
         guard let url = Bundle.main.url(
             forResource: sound.rawValue,
-            withExtension: ".mp3"
+            withExtension: "mp3"
         ) else {
             print("Fail to get url for \(sound)")
             return nil

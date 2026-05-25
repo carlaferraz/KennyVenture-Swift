@@ -1,0 +1,45 @@
+name: KennyVenture
+options:
+  bundleIdPrefix: com.carla
+  deploymentTarget:
+    iOS: "18.1"
+
+targets:
+  KennyVenture:
+    type: application
+    platform: iOS
+    deploymentTarget: "18.1"
+    sources:
+      - path: .
+        excludes:
+          - "Package.swift"
+          - ".git/**"
+          - ".swiftpm/**"
+          - "project.yml"
+          - "KennyVenture.xcodeproj/**"
+          - "Info.plist"
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.carla.KennyVenture
+        SWIFT_VERSION: 5.9
+        TARGETED_DEVICE_FAMILY: "1,2"
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        DEVELOPMENT_TEAM: KC7GZAZC23
+    info:
+      path: Info.plist
+      properties:
+        UILaunchScreen: {}
+        UIApplicationSceneManifest:
+          UIApplicationSupportsMultipleScenes: false
+        UIAppFonts:
+          - SourGummy.ttf
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
+        "UISupportedInterfaceOrientations~ipad":
+          - UIInterfaceOrientationPortrait
+          - UIInterfaceOrientationPortraitUpsideDown
+          - UIInterfaceOrientationLandscapeLeft
+          - UIInterfaceOrientationLandscapeRight
